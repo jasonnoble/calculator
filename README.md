@@ -28,6 +28,13 @@ $ git branch
 $
 ```
 
+## Overall Goals
+
+1. Get comfortable with RSpec TDD process
+2. Continue practicing Ruby
+3. Get comfortable with staging and committing changes via `git`
+   4. You should commit at least at the end of each iteration.  The more you commit, the better.
+
 ## Running Guard
 
 This repo has a number of automated tasks handled by the Guard gem. After creating your topic branch, run the following:
@@ -177,3 +184,11 @@ Iteration Rubric:
 * Rubocop returns no errors
 * All tests are green
 * Code coverage shows 100% test coverage
+
+## Compare your results
+
+After you've committed all your results via Git, you can check your work by running the following:
+
+```
+$ git diff upstream/complete
+```
