@@ -13,4 +13,26 @@ RSpec.describe Calculator do
       expect(calculator.total).to eq(0.00)
     end
   end
+
+  describe "#add(number)" do
+    it "adds a positive number to the total" do
+      calculator.add(5)
+      expect(calculator.total).to eq(5)
+    end
+
+    it "adds a negative number to the total" do
+      calculator.add(-5)
+      expect(calculator.total).to eq(-5)
+    end
+
+    it "adds a zero to the total" do
+      calculator.add(0)
+      expect(calculator.total).to eq(0)
+    end
+
+    it "adds a decimal number to the total" do
+      calculator.add(3.1415)
+      expect(calculator.total).to eq(3.1415)
+    end
+  end
 end

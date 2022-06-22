@@ -1,5 +1,11 @@
 class Calculator
-  def total
-    0.00
+  attr_reader :total
+
+  def initialize
+    @total = 0.00
+  end
+
+  def add(number)
+    @total += number
   end
 end
