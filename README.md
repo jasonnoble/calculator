@@ -57,8 +57,7 @@ Methods:
 * total (returns the current total, 0.00 by default)
 
 Steps:
-1. Create a spec directory
-2. Create a spec/calculator_spec.rb file
+1. Create a spec/calculator_spec.rb file
    1. Require the spec_helper
    2. Require './lib/calculator'
    3. RSpec.describe Calculator
