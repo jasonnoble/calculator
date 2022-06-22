@@ -127,4 +127,24 @@ RSpec.describe Calculator do
       end
     end
   end
+
+  describe "#clear" do
+    describe "when the total is non-zero" do
+      before do
+        calculator.add(5)
+      end
+
+      it "resets the total to 0.00" do
+        calculator.clear
+        expect(calculator.total).to eq(0.00)
+      end
+    end
+
+    describe "when the total is zero" do
+      it "resets the total to 0.00" do
+        calculator.clear
+        expect(calculator.total).to eq(0.00)
+      end
+    end
+  end
 end
