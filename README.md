@@ -147,7 +147,7 @@ A `Calculator` can divide numbers
 Methods:
 
 * divide(number)
-  * Adds the calculator's total by the number
+  * Divides the calculator's total by the number
 
 Special test cases:
 
