@@ -8,4 +8,8 @@ class Calculator
   def add(number)
     @total += number
   end
+
+  def subtract(number)
+    @total -= number
+  end
 end
