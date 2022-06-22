@@ -92,4 +92,39 @@ RSpec.describe Calculator do
       end
     end
   end
+
+  describe "#divide(number)" do
+    describe "when the total is non-zero" do
+      before do
+        calculator.add(2)
+      end
+
+      it "divides the total by a positive number" do
+        calculator.divide(5)
+        expect(calculator.total).to eq(0.4)
+      end
+
+      it "divides the total by a negative number" do
+        calculator.divide(-5)
+        expect(calculator.total).to eq(-0.4)
+      end
+
+      it "divides the total by zero" do
+        calculator.divide(0)
+        expect(calculator.total).to be_infinite
+      end
+
+      it "divides the total by a decimal number" do
+        calculator.divide(0.5)
+        expect(calculator.total).to eq(4)
+      end
+    end
+
+    describe "when the total is zero" do
+      it "returns zero" do
+        calculator.divide(500)
+        expect(calculator.total).to eq(0)
+      end
+    end
+  end
 end
