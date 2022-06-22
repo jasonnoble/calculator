@@ -12,4 +12,8 @@ class Calculator
   def subtract(number)
     @total -= number
   end
+
+  def multiply(number)
+    @total *= number
+  end
 end

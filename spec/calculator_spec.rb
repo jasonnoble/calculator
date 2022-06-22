@@ -35,6 +35,7 @@ RSpec.describe Calculator do
       expect(calculator.total).to eq(3.1415)
     end
   end
+
   describe "#subtract(number)" do
     it "subtracts a positive number to the total" do
       calculator.subtract(5)
@@ -54,6 +55,41 @@ RSpec.describe Calculator do
     it "subtracts a decimal number to the total" do
       calculator.subtract(3.1415)
       expect(calculator.total).to eq(-3.1415)
+    end
+  end
+
+  describe "#multiply(number)" do
+    describe "when the total is non-zero" do
+      before do
+        calculator.add(2)
+      end
+
+      it "multiplies a positive number to the total" do
+        calculator.multiply(5)
+        expect(calculator.total).to eq(10)
+      end
+
+      it "multiplies a negative number to the total" do
+        calculator.multiply(-5)
+        expect(calculator.total).to eq(-10)
+      end
+
+      it "multiplies a zero to the total" do
+        calculator.multiply(0)
+        expect(calculator.total).to eq(0)
+      end
+
+      it "multiplies a decimal number to the total" do
+        calculator.multiply(3.1415)
+        expect(calculator.total).to eq(6.283)
+      end
+    end
+
+    describe "when the total is zero" do
+      it "returns zero" do
+        calculator.multiply(500)
+        expect(calculator.total).to eq(0)
+      end
     end
   end
 end
