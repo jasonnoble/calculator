@@ -7,4 +7,10 @@ RSpec.describe Calculator do
   it "is a Calculator" do
     expect(calculator).to be_a(described_class)
   end
+
+  describe "#total" do
+    it "returns 0.00 by default" do
+      expect(calculator.total).to eq(0.00)
+    end
+  end
 end
