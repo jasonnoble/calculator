@@ -3,7 +3,8 @@
 1. Fork this repo
 2. Clone your fork to your local machine
 3. cd calculator
-4. `bundle`
+4. Add my repo as an upstream (`git remote add upstream git@github.com:jasonnoble/calculator.git`)
+5. `bundle`
 
 Open the editor of your choice.
 
@@ -191,4 +192,11 @@ After you've committed all your results via Git, you can check your work by runn
 
 ```
 $ git diff upstream/complete
+```
+
+## Do it again!
+
+```
+git checkout main
+git checkout -b attempt_2
 ```
