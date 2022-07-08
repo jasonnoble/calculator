@@ -94,16 +94,15 @@ RSpec.configure do |config|
   # Give us some feedback
   config.after(:suite) do
     examples = RSpec.world.filtered_examples.values.flatten
-    if examples.none?(&:exception)
-      phrase = ['woo hoo', 'you got this', 'You know how to program',
-       'Great success', 'oh yeah', 'holy crap, they passed',
-       'another passing test'].sample
-      system "say", phrase
-    else
-      phrase = ['awwwww', 'sad panda', 'another red test', 'something is wrong',
-       'oh noes', 'try again', 'red alert: FAILING TEST'].sample
-      system "say", phrase
-    end
+    phrase = if examples.none?(&:exception)
+               ['woo hoo', 'you got this', 'You know how to program',
+                'Great success', 'oh yeah', 'holy crap, they passed',
+                'another passing test'].sample
+             else
+               ['awwwww', 'sad panda', 'another red test', 'something is wrong',
+                'oh noes', 'try again', 'red alert: FAILING TEST'].sample
+             end
+    system "say", phrase
   end
 
   # Seed global randomization in this process using the `--seed` CLI option.
