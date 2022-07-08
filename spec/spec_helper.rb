@@ -91,6 +91,20 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = :random
 
+  # Give us some feedback
+  config.after(:suite) do
+    examples = RSpec.world.filtered_examples.values.flatten
+    if examples.none?(&:exception)
+      ['woo hoo', 'you got this', 'You know how to program', 'Great success', 'oh yeah', 'holy crap, they passed', 'another passing test'].sample do |phrase|
+        `say '#{phrase}'`
+      end
+    else
+      ['awwwww', 'sad panda', 'another red test', 'something is wrong', 'oh noes', 'try again', 'red alert: FAILING TEST'].sample do |phrase|
+        `say '#{phrase}'`
+      end
+    end
+  end
+
   # Seed global randomization in this process using the `--seed` CLI option.
   # Setting this allows you to use `--seed` to deterministically reproduce
   # test failures related to randomization by passing the same `--seed` value
