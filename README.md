@@ -18,6 +18,13 @@ $ git branch
 $
 ```
 
+Make sure you have the latest changes:
+
+```
+$ git fetch upstream
+$ git reset --hard upstream/main
+```
+
 Create a topic branch:
 
 ```
