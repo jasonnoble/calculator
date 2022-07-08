@@ -34,7 +34,7 @@ $
 1. Get comfortable with RSpec TDD process
 2. Continue practicing Ruby
 3. Get comfortable with staging and committing changes via `git`
-   4. You should commit at least at the end of each iteration.  The more you commit, the better.
+4. You should commit at least at the end of each iteration.  The more you commit, the better.
 
 ## Running Guard
 
