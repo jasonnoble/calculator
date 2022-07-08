@@ -41,7 +41,7 @@ $
 This repo has a number of automated tasks handled by the Guard gem. After creating your topic branch, run the following:
 
 ```
-$ guard --clear
+$ bundle exec guard --clear
 ```
 
 This does a number of things:
