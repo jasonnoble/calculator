@@ -204,6 +204,13 @@ $ git diff upstream/complete
 ## Do it again!
 
 ```
-git checkout main
-git checkout -b attempt_2
+$ git checkout main
+$ git fetch upstream
+$ git reset --hard upstream/main
+$ git checkout -b attempt_2
 ```
+
+Repeat this process until you can do it quickly, without struggling.
+
+![image](https://user-images.githubusercontent.com/22501/177904544-739eb25d-7f85-4139-9b8f-95c77313211f.png)
+
