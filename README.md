@@ -4,7 +4,8 @@
 2. Clone your fork to your local machine
 3. cd calculator
 4. Add my repo as an upstream (`git remote add upstream git@github.com:jasonnoble/calculator.git`)
-5. `bundle`
+5. `git fetch upstream`
+6. `bundle`
 
 Open the editor of your choice.
 
