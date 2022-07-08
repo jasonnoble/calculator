@@ -141,7 +141,7 @@ Methods:
 * multiply(number)
   * Multiply the calculator's total by the number
 
-Special test cases:
+Special test cases (HINT: For all these, but the last one, you probably want to call `calculator.add(2)` before calling `calculator.multiply(number)`:
 
 * Positive Numbers
 * Negative Numbers
