@@ -95,13 +95,14 @@ RSpec.configure do |config|
   config.after(:suite) do
     examples = RSpec.world.filtered_examples.values.flatten
     if examples.none?(&:exception)
-      ['woo hoo', 'you got this', 'You know how to program', 'Great success', 'oh yeah', 'holy crap, they passed', 'another passing test'].sample do |phrase|
-        `say '#{phrase}'`
-      end
+      phrase = ['woo hoo', 'you got this', 'You know how to program',
+       'Great success', 'oh yeah', 'holy crap, they passed',
+       'another passing test'].sample
+      system "say", phrase
     else
-      ['awwwww', 'sad panda', 'another red test', 'something is wrong', 'oh noes', 'try again', 'red alert: FAILING TEST'].sample do |phrase|
-        `say '#{phrase}'`
-      end
+      phrase = ['awwwww', 'sad panda', 'another red test', 'something is wrong',
+       'oh noes', 'try again', 'red alert: FAILING TEST'].sample
+      system "say", phrase
     end
   end
 
