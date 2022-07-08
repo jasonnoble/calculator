@@ -90,7 +90,7 @@ Methods:
 * add(number)
   * Adds the number to the calculator's total
 
-Special test cases:
+Special test cases (HINT: You should have an `it` block for each of these):
 
 * Positive Numbers
 * Negative Numbers
