@@ -168,7 +168,7 @@ Special test cases:
 
 * Positive Numbers
 * Negative Numbers
-* Zero
+* Zero (HINT: `...).to be_infinite)`
 * Decimal values (3.1415)
 * Calculators total is zero
 
