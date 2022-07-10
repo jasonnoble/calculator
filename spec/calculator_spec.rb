@@ -61,4 +61,31 @@ RSpec.describe Calculator do
       expect(calculator.total).to eq(-3.1415)
     end
   end
+
+  describe '#multiply(number)' do
+    before do
+      calculator.add(1)
+    end
+
+    it 'multiplies positive numbers' do
+      calculator.multiply(5)
+      expect(calculator.total).to eq(5.0)
+    end
+
+    it 'multiplies negative numbers' do
+      calculator.multiply(-5)
+      expect(calculator.total).to eq(-5.0)
+    end
+
+    it 'multiplies zero' do
+      calculator.multiply(5)
+      calculator.multiply(0)
+      expect(calculator.total).to eq(0)
+    end
+
+    it 'multiplies decimal numbers' do
+      calculator.multiply(3.1415)
+      expect(calculator.total).to eq(3.1415)
+    end
+  end
 end
