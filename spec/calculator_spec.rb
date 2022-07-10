@@ -38,4 +38,27 @@ RSpec.describe Calculator do
       expect(calculator.total).to eq(3.1415)
     end
   end
+
+  describe '#subtract(number)' do
+    it 'subtracts positive numbers' do
+      calculator.subtract(5)
+      expect(calculator.total).to eq(-5.0)
+    end
+
+    it 'subtracts negative numbers' do
+      calculator.subtract(-5)
+      expect(calculator.total).to eq(5.0)
+    end
+
+    it 'subtracts zero' do
+      calculator.subtract(5)
+      calculator.subtract(0)
+      expect(calculator.total).to eq(-5.0)
+    end
+
+    it 'subtracts decimal numbers' do
+      calculator.subtract(3.1415)
+      expect(calculator.total).to eq(-3.1415)
+    end
+  end
 end
