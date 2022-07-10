@@ -124,7 +124,14 @@ RSpec.describe Calculator do
         calculator.divide(3.1415)
         expect(calculator.total).to eq(0.0)
       end
+    end
+  end
 
+  describe '#clear' do
+    it 'resets the total to 0.00' do
+      calculator.add(5)
+      calculator.clear
+      expect(calculator.total).to eq(0.0)
     end
   end
 end
