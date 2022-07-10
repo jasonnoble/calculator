@@ -16,4 +16,8 @@ class Calculator
   def multiply(number)
     @total *= number
   end
+
+  def divide(number)
+    @total /= number
+  end
 end

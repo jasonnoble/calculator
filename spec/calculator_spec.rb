@@ -88,4 +88,31 @@ RSpec.describe Calculator do
       expect(calculator.total).to eq(3.1415)
     end
   end
+
+  describe '#divide(number)' do
+    before do
+      calculator.add(1)
+    end
+
+    it 'divides positive numbers' do
+      calculator.divide(5)
+      expect(calculator.total).to eq(0.2)
+    end
+
+    it 'divides negative numbers' do
+      calculator.divide(-5)
+      expect(calculator.total).to eq(-0.2)
+    end
+
+    it 'divides zero' do
+      calculator.divide(5)
+      calculator.divide(0)
+      expect(calculator.total).to be_infinite
+    end
+
+    it 'divides decimal numbers' do
+      calculator.divide(3.1415)
+      expect(calculator.total).to eq(0.31831927423205475)
+    end
+  end
 end
