@@ -114,5 +114,17 @@ RSpec.describe Calculator do
       calculator.divide(3.1415)
       expect(calculator.total).to eq(0.31831927423205475)
     end
+
+    context 'when the calculator total is zero' do
+      before do
+        calculator.subtract(1)
+      end
+
+      it 'divides decimal numbers' do
+        calculator.divide(3.1415)
+        expect(calculator.total).to eq(0.0)
+      end
+
+    end
   end
 end
